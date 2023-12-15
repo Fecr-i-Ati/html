@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr-TR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Sağlığım - Üretim Bilgilendirme Formu</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+  </head>
+  <body>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <div class="wrapper">
+        <h1>E-Sağlığım</h1>
+        <h2>Üretici Üretim Bildirimi</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <form class="" action="#">
+              <small class="d-block">Aslında bu işlem e-devlet veya mersis üzerinden yapılacak.Mersis No bir üretici kimliği ile eşleşecek</small>
+              <label class="mt-3" for="productname">Ürün İsmi</label>
+              <input type="text" name="productname" id="productname" class="form-control" placeholder="Aferin">
+              <label class="mt-3" for="productype">Ürün Kategorisi</label>
+              <select name="productype" class="form-control" id="">
+                <option value="">Ürün tipi seçiniz...</option>
+                <option value="1">İlaç</option>
+                <option value="2">Sağlık Ürünü(ilaç harici,vitamin hapı v.s)</option>
+              </select>
+              <label class="mt-3" for="indg">Ürün İçindekiler</label>
+              <textarea class="form-control" name="indg" id="indg" cols="30" rows="10"></textarea>
+              <label class="mt-3" for="cert">Üretim Sertifikası/İzni</label>
+              <input class="form-control" type="file" name="cert" id="cert">
+              <input type="submit" value="Oluştur" class="btn btn-primary mt-3">
+            </form>
+          </div>
+        </div>
+        
+    </div>
+  </body>
+</html>
