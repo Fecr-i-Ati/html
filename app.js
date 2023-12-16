@@ -58,6 +58,9 @@ app.get('/uretici_ilac_kayit', (req, res) => {
 app.get('/uretici_giris', (req, res) => {
   res.render('uretici_giris');
 });
+app.get('/urun_timeline_view', (req, res) => {
+  res.render('urun_timeline_view');
+});
 
 app.get('/uretici_ilac_listesi', (req, res) => {
   res.render('uretici_ilac_listesi');
