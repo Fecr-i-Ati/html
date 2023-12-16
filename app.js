@@ -61,6 +61,18 @@ app.get('/uretici_kayit', (req, res) => {
       res.render('urun_timeline');
   });
 
+  app.get('/uretici_satis', (req, res) => {
+    db.query('SELECT * FROM satici', (err, results) => {
+        if (err) {
+            console.error('Veri alınırken hata oluştu: ' + err);
+            res.status(500).send('Veri alınırken hata oluştu.');
+            return;
+        }
+        
+        // EJS şablonunu kullanarak HTML sayfasını döndürün ve veriyi iletilen veriye ekleyin
+        res.render('uretici_satis.ejs', { data: results });
+    });
+});
 
 
 
@@ -117,7 +129,7 @@ app.post('/satici_kayit', (req, res) => {
           console.log('İlk verinin Mersis No: ' + mersisno);
 
           const sql = 'INSERT INTO urunler (urun_ismi	,urun_icindekiler,	urun_turu,	urun_kategori,	uretici_id) VALUES (?, ?, ?, ?,?)';
-    db.query(sql, [urun_ismi	,urun_icindekiler,	urun_turu,	urun_kategori,	"12412412"], (err, result) => {
+    db.query(sql, [urun_ismi	,urun_icindekiler,	urun_turu,	urun_kategori,	mersisno], (err, result) => {
       if (err) {
         console.error('Veri eklenirken hata oluştu: ' + err);
         res.status(500).send('Veri eklenirken hata oluştu.');
@@ -127,7 +139,7 @@ app.post('/satici_kayit', (req, res) => {
       }
     });
 
-    
+
         } else {
           console.log('Üretici tablosunda veri bulunamadı.');
         }
@@ -138,6 +150,51 @@ app.post('/satici_kayit', (req, res) => {
 
     
   });
+
+
+
+  app.post('/uretici_satis', async (req, res) => {
+    let { 	barkod	,kime	 } = req.body;
+    let islem = "gonderim";
+    // MySQL sorgusu ile veriyi ekleyin
+    const sql2 = 'SELECT * FROM uretici LIMIT 1'; // LIMIT 1 ile sadece ilk veriyi çekiyoruz
+    let mersisno;
+    db.query(sql2, (err, result) => {
+      if (err) {
+        console.error('Veri çekme hatası: ' + err);
+      } else {
+        // Sonuç bir dizi olarak döner, çünkü birden fazla satır dönebilir, ancak burada sadece ilk satırı alıyoruz.
+        const firstRow = result[0];
+    
+        if (firstRow) {
+         
+          mersisno = firstRow.mersisno;
+          console.log('İlk verinin Mersis No: ' + mersisno);
+
+          const sql = 'INSERT INTO timeline (barkod	,kimden,	kime,	tarih,	islem) VALUES (?, ?, ?, ?,?)';
+    db.query(sql, [barkod	,kime,	mersisno,	new Date(),islem], (err, result) => {
+      if (err) {
+        console.error('Veri eklenirken hata oluştu: ' + err);
+        res.status(500).send('Veri eklenirken hata oluştu.');
+      } else {
+        console.log('Veri başarıyla eklendi.');
+        res.status(200).send('Veri başarıyla eklendi.');
+      }
+    });
+
+
+        } else {
+          console.log('Üretici tablosunda veri bulunamadı.');
+        }
+      }
+    });
+
+
+
+    
+  });
+
+
 // Belirtilen bir portta sunucuyu dinleme
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda çalışıyor.`);
