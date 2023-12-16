@@ -1,0 +1,230 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_urunIsmi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_hashedId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_uretici",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_onayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_isletmeOnayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "enum urun_contract.Durum",
+						"name": "_durum",
+						"type": "uint8"
+					}
+				],
+				"name": "urunEkle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hashedId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_urunIsmi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_uretici",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_onayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_isletmeOnayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "enum urun_contract.Durum",
+						"name": "_durum",
+						"type": "uint8"
+					}
+				],
+				"name": "urunGuncelle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hashedId",
+						"type": "string"
+					}
+				],
+				"name": "urunSatildi",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_hashedId",
+						"type": "string"
+					}
+				],
+				"name": "urunSorgula",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "urunIsmi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "uretici",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "onayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "enum urun_contract.Durum",
+						"name": "durum",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "isletmeOnayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "satildimi",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "urunler",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "urun_ismi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "uretici",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "onayNumarasi",
+						"type": "string"
+					},
+					{
+						"internalType": "enum urun_contract.Durum",
+						"name": "durum",
+						"type": "uint8"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "isletmeOnayNumarasi",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "satildimi",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct urun_contract.IsletmeBilgileri",
+						"name": "isletmeBilgileri",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/urun_contract.sol": "urun_contract"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/urun_contract.sol": {
+			"keccak256": "0xe24f9927b2aa434690d0178ccb874f40fccc94d0dfd87b4c6a17289c822b9ce3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e161a2c8ceb3af6120edd3e0a0c24b0af08c87607b0d91fa877e6670a8b54a5b",
+				"dweb:/ipfs/Qmexp6eaT3FZdA7UMrDGMrnv15waXg2EGgw9FGbeSbjwkn"
+			]
+		}
+	},
+	"version": 1
+}

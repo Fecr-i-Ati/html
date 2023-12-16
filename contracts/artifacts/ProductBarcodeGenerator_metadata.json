@@ -1,0 +1,115 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "barcode",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "manufacturer",
+						"type": "address"
+					}
+				],
+				"name": "BarcodeGenerated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "barcodeExists",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_barcode",
+						"type": "uint256"
+					}
+				],
+				"name": "generateBarcode",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "manufacturer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/product_contract_generator.sol": "ProductBarcodeGenerator"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/product_contract_generator.sol": {
+			"keccak256": "0x69d1ace5fbe5af8922c450f49a3ab8e042e06e0ce3395036f41fe62aaf581e3b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fbebeecb5d8ad4e8acaed9ea4d34c076e0b1873a44185472202dfc212145c78b",
+				"dweb:/ipfs/QmeFACVxybCx9eefyJaKV89QNvpoXZ2gaz1cBgaupraMQj"
+			]
+		}
+	},
+	"version": 1
+}
