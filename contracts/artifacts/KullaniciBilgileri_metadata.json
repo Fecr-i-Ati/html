@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.8+commit.dddeac2f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "kullaniciBilgileri",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "mersisNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "firmaAdi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "eposta",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "telefonNo",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "walletAdresi",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_mersisNo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_firmaAdi",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_eposta",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_telefonNo",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_walletAdresi",
+						"type": "address"
+					}
+				],
+				"name": "kullaniciBilgisiEkle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_walletAdresi",
+						"type": "address"
+					}
+				],
+				"name": "mersisNoGetir",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/kullanici_bilgileri.sol": "KullaniciBilgileri"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/kullanici_bilgileri.sol": {
+			"keccak256": "0xb00631751274342a8c6aa1138963da86cbcaa01c1fb95b21514d1ed8889ba7ed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6938a173b8c543167fd33226936c3c4b65e5dc3750c53477fd6ddff43951114c",
+				"dweb:/ipfs/QmbHxVMyxe5ctKTEcT8QY8hguciSBJJMo3RCkXBjMxEWzg"
+			]
+		}
+	},
+	"version": 1
+}
